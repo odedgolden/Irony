@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC4487D022E8FCB600F9230C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4487CF22E8FCB600F9230C /* Main.storyboard */; };
+		FC4487D322E903AD00F9230C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4487D222E903AD00F9230C /* CameraViewController.swift */; };
 		FC548D1622E5DB5300B37DBD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548D1522E5DB5300B37DBD /* Enums.swift */; };
 		FC548D1922E5DF0200B37DBD /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548D1822E5DF0200B37DBD /* CameraManager.swift */; };
 		FC548D1B22E5DF2400B37DBD /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548D1A22E5DF2400B37DBD /* PredictionManager.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		FC4487CF22E8FCB600F9230C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FC4487D222E903AD00F9230C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FC548D1522E5DB5300B37DBD /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		FC548D1822E5DF0200B37DBD /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		FC548D1A22E5DF2400B37DBD /* PredictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
@@ -133,11 +135,12 @@
 			isa = PBXGroup;
 			children = (
 				FC74D11C22E492EA0028266F /* AppDelegate.swift */,
+				FC74D12A22E492ED0028266F /* LaunchScreen.storyboard */,
+				FC4487CF22E8FCB600F9230C /* Main.storyboard */,
+				FC4487D222E903AD00F9230C /* CameraViewController.swift */,
 				FC548D1722E5DEBD00B37DBD /* Framework Layer */,
 				FC548D1422E5DB3A00B37DBD /* Model */,
 				FC74D12522E492ED0028266F /* Assets.xcassets */,
-				FC74D12A22E492ED0028266F /* LaunchScreen.storyboard */,
-				FC4487CF22E8FCB600F9230C /* Main.storyboard */,
 				FC74D12D22E492ED0028266F /* Info.plist */,
 				FC74D12022E492EA0028266F /* Irony.xcdatamodeld */,
 				FC548D1C22E5DF3F00B37DBD /* Resources */,
@@ -308,6 +311,7 @@
 				FC74D11D22E492EA0028266F /* AppDelegate.swift in Sources */,
 				FC548D1E22E5E50B00B37DBD /* YOLOv3Tiny.mlmodel in Sources */,
 				FC548D1622E5DB5300B37DBD /* Enums.swift in Sources */,
+				FC4487D322E903AD00F9230C /* CameraViewController.swift in Sources */,
 				FC548D1B22E5DF2400B37DBD /* PredictionManager.swift in Sources */,
 				FC548D1922E5DF0200B37DBD /* CameraManager.swift in Sources */,
 			);
