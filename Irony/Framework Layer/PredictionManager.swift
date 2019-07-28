@@ -14,9 +14,9 @@ class PredictionManager: NSObject{
     var currentPrediction = Emotion.calm
 
     func predictImage(image: CIImage, completion : (Emotion) -> ()){
-//        guard visionModel = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
-//            fatalError("Error while loading YOLOv3Tiny mlmodel")
-//        }
+        guard let visionModel = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
+            fatalError("Error while loading YOLOv3Tiny mlmodel")
+        }
         completion(currentPrediction)
     }
 }
