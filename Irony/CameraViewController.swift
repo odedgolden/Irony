@@ -13,16 +13,20 @@ import Photos
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
-    let predictionManager = PredictionManager()
+    private let predictionManager = PredictionManager()
 
-    let cameraSession = AVCaptureSession()
+    private let cameraSession = AVCaptureSession()
     private let context = CIContext()
+    
     private let sampleBufferQueue = DispatchQueue(label : "sample_buffer")
     var previewLayer : AVCaptureVideoPreviewLayer!
     var activeInput : AVCaptureDeviceInput!
+    
+    // MARK: Outputs
     let photoOutput = AVCapturePhotoOutput()
     let videoOutput = AVCaptureVideoDataOutput()
     
+    // MARK: UI Outlets
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var emotionLabel: UILabel!
     

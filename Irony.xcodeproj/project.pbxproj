@@ -10,7 +10,6 @@
 		FC4487D022E8FCB600F9230C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4487CF22E8FCB600F9230C /* Main.storyboard */; };
 		FC4487D322E903AD00F9230C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4487D222E903AD00F9230C /* CameraViewController.swift */; };
 		FC548D1622E5DB5300B37DBD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548D1522E5DB5300B37DBD /* Enums.swift */; };
-		FC548D1922E5DF0200B37DBD /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548D1822E5DF0200B37DBD /* CameraManager.swift */; };
 		FC548D1B22E5DF2400B37DBD /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC548D1A22E5DF2400B37DBD /* PredictionManager.swift */; };
 		FC548D1E22E5E50B00B37DBD /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FC548D1D22E5E50B00B37DBD /* YOLOv3Tiny.mlmodel */; };
 		FC74D11D22E492EA0028266F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74D11C22E492EA0028266F /* AppDelegate.swift */; };
@@ -20,6 +19,7 @@
 		FC74D12C22E492ED0028266F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC74D12A22E492ED0028266F /* LaunchScreen.storyboard */; };
 		FC74D13722E492EE0028266F /* IronyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74D13622E492EE0028266F /* IronyTests.swift */; };
 		FC74D14222E492EE0028266F /* IronyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC74D14122E492EE0028266F /* IronyUITests.swift */; };
+		FC9E5B4B22EF889600BAD5A1 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FC9E5B4A22EF889500BAD5A1 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 		FC4487CF22E8FCB600F9230C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC4487D222E903AD00F9230C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FC548D1522E5DB5300B37DBD /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		FC548D1822E5DF0200B37DBD /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		FC548D1A22E5DF2400B37DBD /* PredictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
 		FC548D1D22E5E50B00B37DBD /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		FC74D11922E492EA0028266F /* Irony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Irony.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +58,7 @@
 		FC74D13D22E492EE0028266F /* IronyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IronyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC74D14122E492EE0028266F /* IronyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IronyUITests.swift; sourceTree = "<group>"; };
 		FC74D14322E492EE0028266F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC9E5B4A22EF889500BAD5A1 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,6 @@
 		FC548D1722E5DEBD00B37DBD /* Framework Layer */ = {
 			isa = PBXGroup;
 			children = (
-				FC548D1822E5DF0200B37DBD /* CameraManager.swift */,
 				FC548D1A22E5DF2400B37DBD /* PredictionManager.swift */,
 			);
 			path = "Framework Layer";
@@ -107,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				FC548D1D22E5E50B00B37DBD /* YOLOv3Tiny.mlmodel */,
+				FC9E5B4A22EF889500BAD5A1 /* Resnet50.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -307,13 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9E5B4B22EF889600BAD5A1 /* Resnet50.mlmodel in Sources */,
 				FC74D12222E492EA0028266F /* Irony.xcdatamodeld in Sources */,
 				FC74D11D22E492EA0028266F /* AppDelegate.swift in Sources */,
 				FC548D1E22E5E50B00B37DBD /* YOLOv3Tiny.mlmodel in Sources */,
 				FC548D1622E5DB5300B37DBD /* Enums.swift in Sources */,
 				FC4487D322E903AD00F9230C /* CameraViewController.swift in Sources */,
 				FC548D1B22E5DF2400B37DBD /* PredictionManager.swift in Sources */,
-				FC548D1922E5DF0200B37DBD /* CameraManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
