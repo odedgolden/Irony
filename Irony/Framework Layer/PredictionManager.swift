@@ -11,19 +11,26 @@ import CoreML
 import Vision
 
 class PredictionManager: NSObject{
-    var currentPrediction = Emotion.calm
 
     func predictImage(image: CIImage, completion : @escaping (Emotion) -> ()){
         guard let visionModel = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
             fatalError("Error while loading YOLOv3Tiny mlmodel")
         }
         
-        let objectRecognitionRequest = VNCoreMLRequest(model: visionModel){ [weak self](request, error) in
+        let objectRecognitionRequest = VNCoreMLRequest(model: visionModel){(request, error) in
             DispatchQueue.main.async(execute: {
                 // perform all the UI updates on the main queue
                 if let results = request.results {
-                    print(results.first ?? "No Results")
-//                    completion(self?.currentPrediction)
+                    if results.count > 0{
+                        completion(Emotion.happy)
+                        if let objectObservation = results.first as? VNRecognizedObjectObservation {
+                            print(objectObservation.labels[0])
+                        } else {
+                            print("Not an observation")
+                        }
+                    } else {
+                        completion(Emotion.calm)
+                    }
                 } else {
                     print("Doesn't work")
                 }
